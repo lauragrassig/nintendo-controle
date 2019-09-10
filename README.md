@@ -1,9 +1,9 @@
 # Pure CSS Pikachu
 
-**Date:** September 04, 2019 
+**Date:** September 09, 2019 
 
-**Preview:** https://codepen.io/lauragrassig/pen/eYOebmN
+**Preview:** https://codepen.io/lauragrassig/pen/GRKxomM
 
 ***HTML5 & CSS3***
 
-![Image IceCream](https://i.ibb.co/4tp3Vyw/pikachu.png)
+![Image IceCream](https://i.ibb.co/s6w80BZ/newgame.png)
