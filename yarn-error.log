@@ -1,0 +1,50 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add nes.css
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Users\Laura\AppData\Local\Microsoft\WindowsApps;;C:\Users\Laura\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Laura\AppData\Roaming\npm;C:\Users\Laura\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  10.16.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'F:\Users\Laura\Documents\100 DIAS CODANDO\controle-nintendo\node_modules\node-sass\vendor\win32-x64-64\binding.node'
+
+npm manifest: 
+  {
+    "name": "ice-cream",
+    "version": "1.0.0",
+    "description": "Pure CSS Ice Cream ",
+    "main": "gulpfile.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/lauragrassig/ice-cream-project.git"
+    },
+    "author": "lauragrassig",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/lauragrassig/ice-cream-project/issues"
+    },
+    "homepage": "https://github.com/lauragrassig/ice-cream-project#readme",
+    "dependencies": {
+      "gulp": "^4.0.2"
+    },
+    "devDependencies": {
+      "gulp-sass": "^4.0.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

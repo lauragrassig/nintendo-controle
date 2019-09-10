@@ -1,0 +1,25 @@
+{
+  "name": "ice-cream",
+  "version": "1.0.0",
+  "description": "Pure CSS Ice Cream ",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauragrassig/ice-cream-project.git"
+  },
+  "author": "lauragrassig",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauragrassig/ice-cream-project/issues"
+  },
+  "homepage": "https://github.com/lauragrassig/ice-cream-project#readme",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp-sass": "^4.0.2"
+  }
+}

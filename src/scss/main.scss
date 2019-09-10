@@ -1,0 +1,353 @@
+////////// *~ DEFAULT ~* //////////
+//*~ Cores
+$bg: #2f363e;
+$fas: #b15656;
+$controle: #cdcdcd;
+$controle-g: #a0a0a0;
+$botao-l: #b5afdd;
+$botao-d: #5e41c3;
+$bg-botao: #e2dddd;
+$botao-p: #4a4949;
+$setas: #383535;
+$botao-l1: #bbbaba;
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+//*~ Placeholder
+%base-controle {
+  border-radius: 5rem;
+  width: 8rem;
+  height: 8rem;
+}
+
+%nome-botoes {
+  width: 1rem;
+  height: 2rem;
+  transform: rotate(214deg);
+  position: absolute;
+  color: white;
+  font-family: monospace;
+  font-size: .8rem;
+}
+
+%setas {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+//*~ Min. Reset
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: $bg !important;
+}
+
+a {
+  color: white !important;
+  text-decoration: none;
+  &:hover {
+    color: white !important;
+  }
+  &:active {
+    color: white !important;
+  }
+}
+
+.fas {
+  color: $fas;
+  margin-left: .5rem;
+  position: absolute;
+  left: 100%;
+  top: 5px;
+}
+
+footer {
+  display: flex !important;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  position: absolute;
+  top: 80%;
+}
+
+//////// *~ WRAPPER ~* /////////
+.wrapper {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 0;
+  width: 350px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-box {
+  position: fixed;
+  margin: auto;
+  display: block;
+  margin-top: 0;
+  width: 350px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+//////// *~ BASE CONTROLE ~* /////////
+.controle {
+  position: absolute;
+  background: $controle;
+  top: 30%;
+  &.-base {
+    width: 10rem;
+    left: 27%;
+    height: 7rem;
+    top: 30%;
+  }
+  &.-esquerdo {
+    @extend %base-controle;
+    left: 6%;
+  }
+  &.-direito {
+    @extend %base-controle;
+    left: 58%;
+    &:before {
+      content: '';
+      background: $controle-g;
+      width: 7.5rem;
+      height: 7.5rem;
+      position: absolute;
+      border-radius: 6rem;
+      left: 4%;
+      top: 4%;
+    }
+  }
+}
+
+//////// *~ BOTÕES ~* /////////
+
+//*~ Fundo Botões
+.bg-botao {
+  width: 5rem;
+  height: 1.7rem;
+  border-radius: 3rem;
+  background-color: $bg-botao;
+  position: absolute;
+  transform: rotate(145deg);
+  &.-top {
+    top: 36%;
+    left: 63%;
+    &:before {
+      @extend %nome-botoes;
+      content: 'X';
+      top: -.8rem;
+      left: -1rem;
+    }
+    &:after {
+      @extend %nome-botoes;
+      content: 'Y';
+      color: white;
+      top: -.8rem;
+      left: 5.1rem;
+    }
+  }
+  &.-bottom {
+    top: 41.2%;
+    left: 68%;
+    &:before {
+      @extend %nome-botoes;
+      content: 'A';
+      top: -0.8rem;
+      left: -1rem;
+    }
+    &:after {
+      @extend %nome-botoes;
+      content: 'B';
+      top: -0.8rem;
+      left: 5rem;
+    }
+  }
+}
+
+//*~ Botões Pricipais
+.botoes {
+  border-radius: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  &.-r-l-1 {
+    background: $botao-l;
+    box-shadow: -1px -1px 1px #8984ab;
+    top: 8.6%;
+    left: .1rem;
+    &:hover {
+      box-shadow: 1px 0px 1px #bfbdcc;
+    }
+  }
+  &.-r-l-2 {
+    background: $botao-l;
+    box-shadow: -1px -1px 1px #8984ab;
+    left: 67%;
+    top: .1rem;
+    &:hover {
+      box-shadow: 1px 0px 1px #bfbdcc;
+    }
+  }
+  &.-r-d-1 {
+    background: $botao-d;
+    box-shadow: -1px -1px 1px #41346d;
+    top: 7%;
+    left: 3%;
+    &:hover {
+      box-shadow: 1px 1px 1px #9180c7;
+    }
+  }
+  &.-r-d-2 {
+    background: $botao-d;
+    box-shadow: -1px -1px 1px #41346d;
+    left: 68%;
+    top: 4%;
+    &:hover {
+      box-shadow: 1px 1px 1px #9180c7;
+    }
+  }
+}
+
+//*~ Botões L1 L2
+.botao-l {
+  background-color: $botao-l1;
+  position: absolute;
+  border-radius: 1rem;
+  width: 3rem;
+  height: .5rem;
+  &.-l1 {
+    top: 29.5%;
+    left: 23%;
+  }
+  &.-l2 {
+    top: 29.5%;
+    left: 63%;
+  }
+}
+
+//*~ Botões Start/Select
+.botao-centro {
+  width: 0.5rem;
+  height: 1.3rem;
+  border-radius: 1rem;
+  background-color: $botao-p;
+  position: absolute;
+  top: 40%;
+  transform: rotate(30deg);
+  &.-start {
+    left: 11.7rem;
+    &:before {
+      content: 'Start';
+      transform: rotate(330deg);
+      width: 2rem;
+      height: 1rem;
+      top: 1.3rem;
+      position: absolute;
+      font-size: 0.6rem;
+      left: 0.2rem;
+      font-family: monospace;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #a0a0a0;
+    }
+  }
+  &.-select {
+    left: 9rem;
+    &:before {
+      content: 'Select';
+      transform: rotate(330deg);
+      width: 2rem;
+      height: 1rem;
+      top: 1.4rem;
+      position: absolute;
+      font-size: 0.6rem;
+      left: 0rem;
+      font-family: monospace;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #a0a0a0;
+    }
+  }
+}
+
+//*~ Botões Setas
+.botao-seta {
+  background-color: $botao-p;
+  position: absolute;
+  border-radius: 0.3rem;
+  &.-cima {
+    width: 1rem;
+    height: 3.7rem;
+    top: 13.5rem;
+    left: 4.7rem;
+    &:before {
+      @extend %setas;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 8px solid $setas;
+      left: .3rem;
+      top: .2rem;
+    }
+    &:after {
+      @extend %setas;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 8px solid $setas;
+      left: .3rem;
+      top: 2.6rem;
+    }
+  }
+  &.-baixo {
+    width: 3.7rem;
+    height: 1rem;
+    top: 14.8rem;
+    left: 3.4rem;
+    &:before {
+      @extend %setas;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 7px solid $setas;
+      left: 2.8rem;
+      top: .2rem;
+    }
+    &:after {
+      @extend %setas;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-right: 7px solid $setas;
+      left: .2rem;
+      top: .2rem;
+    }
+  }
+}
+
+.circulo {
+  width: 4.3rem;
+  height: 4.3rem;
+  position: absolute;
+  border-radius: 6rem;
+  border: 1px solid rgba(160, 160, 160, 0.4);
+  top: 13.1rem;
+  left: 3rem;
+}
+
+
+.box {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  position: absolute;
+  text-align: center;
+  top: 4rem;
+  .select {
+    position: absolute;
+    left: 2rem;
+  }
+}
